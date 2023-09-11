@@ -1,0 +1,22 @@
+/* configuração do arrombas*/
+git config --global user.name "JONAS BROTHERS"
+git config --global user.email jonasbrothers@gmail.com
+git clone jonasbrotherslink
+
+/*Criação da solução e do projetas mvc*/
+dotnet new sln --name MtecDevs
+dotnet new mvc -o MtecDevs -f net6.0
+dotnet sln add MtecDevs\MtecDevs.csproj
+
+/* instalando os broders (pacotes) */
+dotnet add package Microsoft.EntityFrameworkCore --version 6.0.21
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.21
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6.0.21
+
+/* informações pika */
+Usuários - Devs/Admin/Prof/QualquerInferno
+    Dados básicos (oq todo noia vai ter): Nome, Data Nascimento, Foto, TipoDev
+TipoDev - Front/Back/Full/UX-UI
+
+
