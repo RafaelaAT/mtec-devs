@@ -19,4 +19,13 @@ Usuários - Devs/Admin/Prof/QualquerInferno
     Dados básicos (oq todo noia vai ter): Nome, Data Nascimento, Foto, TipoDev
 TipoDev - Front/Back/Full/UX-UI
 
+Criou a classe de Contexto
+Criou a ConnectionString
+Adicionou os serviços de DbContext e Identity ao program
 
+Criar a migração
+dotnet ef
+
+dotnet tool install --global dotnet-ef
+dotnet ef migrations add criar-banco
+dotnet ef database uptade
