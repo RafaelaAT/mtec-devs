@@ -240,6 +240,43 @@ namespace MtecDevs.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "0b6359bd-7c08-423c-b9fb-e1b91ec163c6", "cb3aee09-ca43-4bbb-a5f4-481f23f6fad7", "Usuário", "USUÁRIO" },
+                    { "8e22f579-7ff3-405f-953d-49ac5a019da1", "9e235551-b612-4f54-bd8a-30f5249aad0e", "Moderador", "MODERADOR" },
+                    { "fafacae4-b045-456e-b8ab-8dd376aa9328", "ed5f09e2-3c96-40c0-afc2-570d30994d1f", "Administrador", "ADMINISTRADOR" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "cec3ad97-e841-49dc-bc95-e2516366b18c", 0, "d7772e61-f507-46e0-be64-c505c5f20992", "rafaelaalessandratorelli@gmail.com", true, false, null, "RAFAELAALESSANDRATORELLI@GMAIL.COM", "JULIARAFAELA", "AQAAAAEAACcQAAAAEO0bMa0K09vigVZ20nRxYTiv28VMZRTryzeKiAMOCU1jNJX8TDfdhtB5zUEPvO7IAg==", "14991686274", true, "6d5c8529-39e4-40f3-a62a-a5325a1f1bd0", false, "JuliaRafaela" });
+
+            migrationBuilder.InsertData(
+                table: "TipoDev",
+                columns: new[] { "Id", "Nome" },
+                values: new object[,]
+                {
+                    { 1, "FullStack" },
+                    { 2, "FrontEnd" },
+                    { 3, "BackEnd" },
+                    { 4, "Design" },
+                    { 5, "Jogos" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { "fafacae4-b045-456e-b8ab-8dd376aa9328", "cec3ad97-e841-49dc-bc95-e2516366b18c" });
+
+            migrationBuilder.InsertData(
+                table: "Usuario",
+                columns: new[] { "UserId", "DataNascimento", "Foto", "Nome", "TipoDevId" },
+                values: new object[] { "cec3ad97-e841-49dc-bc95-e2516366b18c", new DateTime(2006, 9, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), "/img/usuarios/avatar.jpg", "Julia Alessandra Delfino Torelli", 4 });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",

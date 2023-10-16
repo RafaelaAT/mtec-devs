@@ -47,22 +47,22 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7dd8f4d0-dac8-4061-960d-d2ca6794ae45",
-                            ConcurrencyStamp = "dad120e9-fc27-464b-b861-592e7e3a5072",
+                            Id = "fafacae4-b045-456e-b8ab-8dd376aa9328",
+                            ConcurrencyStamp = "ed5f09e2-3c96-40c0-afc2-570d30994d1f",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "7153112c-3371-42c1-8c28-a23ccb087c4d",
-                            ConcurrencyStamp = "06350a25-5173-4670-aadf-be836ecc75b8",
+                            Id = "8e22f579-7ff3-405f-953d-49ac5a019da1",
+                            ConcurrencyStamp = "9e235551-b612-4f54-bd8a-30f5249aad0e",
                             Name = "Moderador",
                             NormalizedName = "MODERADOR"
                         },
                         new
                         {
-                            Id = "ef412db8-4f73-43ff-88c2-d49abe7990cd",
-                            ConcurrencyStamp = "01c025cb-df72-4b1d-929d-4de3d0c7cb08",
+                            Id = "0b6359bd-7c08-423c-b9fb-e1b91ec163c6",
+                            ConcurrencyStamp = "cb3aee09-ca43-4bbb-a5f4-481f23f6fad7",
                             Name = "Usuário",
                             NormalizedName = "USUÁRIO"
                         });
@@ -157,18 +157,18 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "de39463b-3682-4b4b-9e2e-5d7955df8029",
+                            Id = "cec3ad97-e841-49dc-bc95-e2516366b18c",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "29ddf305-079b-4a8a-8795-f3cedb033ac9",
+                            ConcurrencyStamp = "d7772e61-f507-46e0-be64-c505c5f20992",
                             Email = "rafaelaalessandratorelli@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "RAFAELAALESSANDRATORELLI@GMAIL.COM",
                             NormalizedUserName = "JULIARAFAELA",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIsTbWV/2OJWgICQX7LyisMsEGKCWdPURHyHkF5WMqTInR2BSFKYP2O+f5Yie83/jQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEO0bMa0K09vigVZ20nRxYTiv28VMZRTryzeKiAMOCU1jNJX8TDfdhtB5zUEPvO7IAg==",
                             PhoneNumber = "14991686274",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "a9385e54-c9db-459d-a2c1-8a64b1e30d43",
+                            SecurityStamp = "6d5c8529-39e4-40f3-a62a-a5325a1f1bd0",
                             TwoFactorEnabled = false,
                             UserName = "JuliaRafaela"
                         });
@@ -236,8 +236,8 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "de39463b-3682-4b4b-9e2e-5d7955df8029",
-                            RoleId = "7dd8f4d0-dac8-4061-960d-d2ca6794ae45"
+                            UserId = "cec3ad97-e841-49dc-bc95-e2516366b18c",
+                            RoleId = "fafacae4-b045-456e-b8ab-8dd376aa9328"
                         });
                 });
 
@@ -332,7 +332,7 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "de39463b-3682-4b4b-9e2e-5d7955df8029",
+                            UserId = "cec3ad97-e841-49dc-bc95-e2516366b18c",
                             DataNascimento = new DateTime(2006, 9, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Foto = "/img/usuarios/avatar.jpg",
                             Nome = "Julia Alessandra Delfino Torelli",
