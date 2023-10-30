@@ -11,7 +11,7 @@ using MtecDevs.Data;
 namespace MtecDevs.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231016104057_criar-banco")]
+    [Migration("20231030104438_criar-banco")]
     partial class criarbanco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,22 +49,22 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "fafacae4-b045-456e-b8ab-8dd376aa9328",
-                            ConcurrencyStamp = "ed5f09e2-3c96-40c0-afc2-570d30994d1f",
+                            Id = "823f507f-26a1-4ea5-9449-2f760e241124",
+                            ConcurrencyStamp = "436c1abd-2e03-41f6-8735-dc26635b9c09",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "8e22f579-7ff3-405f-953d-49ac5a019da1",
-                            ConcurrencyStamp = "9e235551-b612-4f54-bd8a-30f5249aad0e",
+                            Id = "9c3a4abd-4c4f-4858-a5e7-7c039cbd562f",
+                            ConcurrencyStamp = "e2e3db18-a994-4382-a0de-2deee3e227f5",
                             Name = "Moderador",
                             NormalizedName = "MODERADOR"
                         },
                         new
                         {
-                            Id = "0b6359bd-7c08-423c-b9fb-e1b91ec163c6",
-                            ConcurrencyStamp = "cb3aee09-ca43-4bbb-a5f4-481f23f6fad7",
+                            Id = "00295971-0f87-463e-9cfe-475fce4a2780",
+                            ConcurrencyStamp = "d07da2bc-f971-419a-9e48-c6ded087427a",
                             Name = "Usuário",
                             NormalizedName = "USUÁRIO"
                         });
@@ -159,18 +159,18 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "cec3ad97-e841-49dc-bc95-e2516366b18c",
+                            Id = "30083ad6-8500-4063-92ff-5b50fc1c58d2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d7772e61-f507-46e0-be64-c505c5f20992",
+                            ConcurrencyStamp = "c828f3d2-7694-4487-8cd1-01b23170e4b3",
                             Email = "rafaelaalessandratorelli@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "RAFAELAALESSANDRATORELLI@GMAIL.COM",
                             NormalizedUserName = "JULIARAFAELA",
-                            PasswordHash = "AQAAAAEAACcQAAAAEO0bMa0K09vigVZ20nRxYTiv28VMZRTryzeKiAMOCU1jNJX8TDfdhtB5zUEPvO7IAg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEG+srk2HffYyHzVRtZUlsfiuE36Rg9VsIrji8aIwf61iJBFqX8SAIM0utMoAUbLkEg==",
                             PhoneNumber = "14991686274",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "6d5c8529-39e4-40f3-a62a-a5325a1f1bd0",
+                            SecurityStamp = "1426d3fb-ebad-4a60-bb0c-53fafb25e5bf",
                             TwoFactorEnabled = false,
                             UserName = "JuliaRafaela"
                         });
@@ -238,8 +238,8 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "cec3ad97-e841-49dc-bc95-e2516366b18c",
-                            RoleId = "fafacae4-b045-456e-b8ab-8dd376aa9328"
+                            UserId = "30083ad6-8500-4063-92ff-5b50fc1c58d2",
+                            RoleId = "823f507f-26a1-4ea5-9449-2f760e241124"
                         });
                 });
 
@@ -334,7 +334,7 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "cec3ad97-e841-49dc-bc95-e2516366b18c",
+                            UserId = "30083ad6-8500-4063-92ff-5b50fc1c58d2",
                             DataNascimento = new DateTime(2006, 9, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Foto = "/img/usuarios/avatar.jpg",
                             Nome = "Julia Alessandra Delfino Torelli",
