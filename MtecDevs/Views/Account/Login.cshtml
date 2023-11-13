@@ -31,26 +31,27 @@
 
         <button type="submit" class="w-100 btn btn-primary">Entrar</button>
 
-        <a asp-action="" class="d-block text-center mt-3 text-decoration-none">Esqueceu sua senha?</a>
+        <a asp-action="" class="d-block text-center mt-3 text-decoration-none">Esqueceu sua Senha?</a>
 
         <div class="separator">
             <div class="line"></div>
-            <h6>Novo por aqui?</h6>
+            <h6>Novo por Aqui?</h6>
             <div class="line"></div>
         </div>
 
         <a asp-action="" class="w-100 btn btn-success mt-1">Criar Conta</a>
+
     </form>
 </main>
 
-@section Scripts{
+@section Scripts {
     <partial name="_ValidationScriptsPartial"></partial>
     <script>
         let mensagemErro = '';
-        $('.validation-summary-errors ul li').each(function() {
+        $('.validation-summary-errors ul li').each(function () {
             mensagemErro += $(this).text();
         });
-        if(mensagemErro != ''){
+        if (mensagemErro != '') {
             Swal.fire({
                 title: "Acesso Negado",
                 text: mensagemErro,

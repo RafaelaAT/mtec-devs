@@ -23,11 +23,14 @@ public class AccountController : Controller
     }
 
     [HttpGet]
-    public IActionResult Login()
+    public IActionResult Login(string ReturnUrl)
     {
-        return View();
+        LoginVM login = new(){
+            UrlRetorno = ReturnUrl ?? Url.Content("~/")
+        };
+        return View(login);
     }
-    
+
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(LoginVM login)
@@ -45,9 +48,9 @@ public class AccountController : Controller
             }
             // Login é só por UserName
             var result = await _signInManager.PasswordSignInAsync(
-              userName, login.Senha, login.Lembrar, lockoutOnFailure: true
+                userName, login.Senha, login.Lembrar, lockoutOnFailure: true
             );
-
+            
             if (result.Succeeded)
             {
                 _logger.LogInformation($"Usuário {login.Email} acessou o sistema");
@@ -58,7 +61,7 @@ public class AccountController : Controller
                 _logger.LogWarning($"Usuário {login.Email} está bloqueado");
                 return RedirectToAction("Lockout");
             }
-            ModelState.AddModelError(string.Empty, "Usuário e/ou Senha Inválidos!");
+            ModelState.AddModelError(string.Empty, "Usuário e/ou Senha Inválidos!!");
         }
         return View(login);
     }
@@ -70,13 +73,6 @@ public class AccountController : Controller
         _logger.LogInformation($"Usuário {ClaimTypes.Email} fez logoff");
         await _signInManager.SignOutAsync();
         return RedirectToAction("Index", "Home");
-    }
-
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View("Error!");
     }
 
     private static bool IsValidEmail(string email)
