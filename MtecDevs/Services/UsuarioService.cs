@@ -14,7 +14,7 @@ public class UsuarioService : IUsuarioService
     private readonly HttpContextAccessor _httpContextAccessor;
 
     public UsuarioService(
-        AppDbContext contexto, 
+        AppDbContext contexto,
         SignInManager<IdentityUser> signInManager,
         UserManager<IdentityUser> userManager,
         HttpContextAccessor httpContextAccessor
@@ -25,6 +25,7 @@ public class UsuarioService : IUsuarioService
         _userManager = userManager;
         _httpContextAccessor = httpContextAccessor;
     }
+
     public async Task<UsuarioVM> GetUsuarioLogado()
     {
         if (_signInManager.IsSignedIn(_httpContextAccessor.HttpContext.User))

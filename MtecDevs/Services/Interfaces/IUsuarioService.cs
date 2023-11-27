@@ -1,7 +1,8 @@
-namespace MtecDevs.Services.Interfaces;
 using MtecDevs.ViewModels;
 
-public interface UsuarioService
+namespace MtecDevs.Services;
+
+public interface IUsuarioService
 {
-     Task<UsuarioVM> GetUsuarioLogado();
+    Task<UsuarioVM> GetUsuarioLogado();
 }
